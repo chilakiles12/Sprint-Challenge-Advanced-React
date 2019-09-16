@@ -4,19 +4,13 @@ import { Card, Icon } from 'semantic-ui-react';
 const MainCard = props => (
   <Card>
     <Card.Content>
-      <Card.Header>{props.playerState.name}</Card.Header>
+      <Card.Header>{props.player.name}</Card.Header>
       <Card.Meta>
-        <span>{props.playerState.country}</span>
+        <span>{props.player.country}</span>
       </Card.Meta>
       <Card.Description>
-        Matthew is a musician living in Nashville.
+        Google Searches: {props.player.searches}
       </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a href="www.github.com">
-        <Icon name="user" />
-        22 Friends
-      </a>
     </Card.Content>
   </Card>
 );

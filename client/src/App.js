@@ -1,4 +1,5 @@
 import React from 'react';
+import MainCard from './Components/MainCard';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,14 +41,9 @@ class App extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div>
+        <div className="grid-view">
           {players.map(player => (
-            <div key={player.id}>
-              <h2>{player.name}</h2>
-              <h2>{player.id}</h2>
-              <h2>{player.country}</h2>
-              <h2>{player.searches}</h2>
-            </div>
+            <MainCard key={player.id} player={player} />
           ))}
         </div>
       );
