@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MainCard from './Components/MainCard';
+import CardList from './Components/CardList';
 import NavBar from './Components/NavBar';
 
 class App extends React.Component {
@@ -19,36 +19,23 @@ class App extends React.Component {
       .then(
         result => {
           this.setState({
-            isLoaded: true,
             players: result
           });
         },
 
         error => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
+          console.log(error);
         }
       );
   }
 
   render() {
-    const { error, isLoaded, players } = this.state;
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
-      return (
-        <div className="grid-view">
-          <NavBar />
-          {players.map(player => (
-            <MainCard key={player.id} player={player} />
-          ))}
-        </div>
-      );
-    }
+    return (
+      <div>
+        <NavBar />
+        <CardList players={this.state.players} className="grid-view" />
+      </div>
+    );
   }
 }
 export default App;
