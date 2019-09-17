@@ -17,3 +17,7 @@ code {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+}

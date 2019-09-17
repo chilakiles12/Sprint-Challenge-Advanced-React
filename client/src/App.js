@@ -1,5 +1,7 @@
 import React from 'react';
+
 import MainCard from './Components/MainCard';
+import NavBar from './Components/NavBar';
 
 class App extends React.Component {
   constructor(props) {
@@ -42,6 +44,7 @@ class App extends React.Component {
     } else {
       return (
         <div className="grid-view">
+          <NavBar />
           {players.map(player => (
             <MainCard key={player.id} player={player} />
           ))}
