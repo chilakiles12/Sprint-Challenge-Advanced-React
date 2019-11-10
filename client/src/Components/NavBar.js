@@ -7,7 +7,9 @@ export default () => {
     <div
       style={{
         background: theme === 'dark' ? '#000' : '#fff',
-        color: theme === 'dark' ? '#fff' : '#000'
+        color: theme === 'dark' ? '#fff' : '#000',
+        height: '600px',
+        zIndex: 0
       }}
     >
       <button type="button" onClick={toggleTheme}>

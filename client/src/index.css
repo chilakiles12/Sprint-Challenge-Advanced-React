@@ -16,6 +16,8 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  z-index: 9999;
+  top: 0px;
 }
 .dark-mode {
   color: #fff;
