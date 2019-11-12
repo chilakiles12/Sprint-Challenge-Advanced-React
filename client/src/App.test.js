@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MainCard from './Components/MainCard';
+
 import { render } from '@testing-library/react';
 import App from './App';
 
@@ -14,8 +16,8 @@ test('it displays a link button with the text Switch theme', () => {
   getByText('Switch theme');
 });
 
-// test('it displays google searches text', () => {
-//   //Arrange, Act, Assert
-//   const { getByText } = render(<App />);
-//   getByText('');
-// });
+test('get Navbar from App', () => {
+  //Arrange, Act, Assert
+  const { getByText } = render(<App />);
+  getByText('Navbar');
+});

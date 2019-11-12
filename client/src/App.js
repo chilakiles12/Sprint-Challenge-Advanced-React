@@ -32,6 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h1>Navbar</h1>
         <NavBar />
         <CardList players={this.state.players} className="grid-view" />
       </div>
